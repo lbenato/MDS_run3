@@ -39,7 +39,7 @@ We will be working inside a conda environment. To create and activate the enviro
 ```bash
 # create a conda environment called "mds_run3"
 # most recent versions of python cause issues with root/uproot/awkward
-conda create --prefix /nfs/dust/cms/user/lbenato/anaconda3p10/envs -n mds_run3 python=3.7
+conda create -p /nfs/dust/cms/user/lbenato/anaconda3p10/envs/mds_run3 python=3.7
 
 # activate the environment
 # IMPORTANT: You also need to run this command every time you log in to NAF!
