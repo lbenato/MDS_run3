@@ -19,7 +19,7 @@ bash Anaconda3-2022.10-Linux-x86_64.sh
 # ATTENTION! When asked where to install anaconda,
 # do NOT press enter to confirm the default location,
 # but provide your dust home directory instead
-# (type: /nfs/dust/cms/user/lbenato/anaconda3).
+# (type: /nfs/dust/cms/user/lbenato/anaconda3p10).
 
 # Answer all other prompts with the recommended option (in brackets).
 # Optional: To have an easier way to activate your conda environment,
@@ -27,7 +27,7 @@ bash Anaconda3-2022.10-Linux-x86_64.sh
 
 # load anaconda - valid for DESY only
 # IMPORTANT: You have to run this command every time you log in to NAF!
-export PATH=/nfs/dust/cms/user/lbenato/anaconda3/bin:$PATH
+export PATH=/nfs/dust/cms/user/lbenato/anaconda3p10/bin:$PATH
 
 ```
 
@@ -37,13 +37,13 @@ export PATH=/nfs/dust/cms/user/lbenato/anaconda3/bin:$PATH
 We will be working inside a conda environment. To create and activate the environment, follow the instructions below:
 
 ```bash
-# create a conda environment called "run3"
+# create a conda environment called "mds_run3"
 # most recent versions of python cause issues with root/uproot/awkward
-conda create -n run3 python=3.7
+conda create -n mds_run3 python=3.7
 
 # activate the environment
 # IMPORTANT: You also need to run this command every time you log in to NAF!
-source activate /nfs/dust/cms/user/lbenato/anaconda3/envs/run3
+source activate /nfs/dust/cms/user/lbenato/anaconda3p10/envs/mds_run3
 ```
 
 ### Installing required packages
@@ -54,7 +54,7 @@ source activate /nfs/dust/cms/user/lbenato/anaconda3/envs/run3
 # cd to your environment directory
 # Note: This is important! If you try to install packages when not in
 # your environment directory, you might get file I/O errors!
-cd /nfs/dust/cms/user/lbenato/anaconda3/envs/run3/
+cd /nfs/dust/cms/user/lbenato/anaconda3p10/envs/mds_run3/
 
 #install pandas (for data manipulation and analysis)
 conda install pandas
@@ -91,10 +91,10 @@ conda install -c conda-forge root_numpy
 conda config --set channel_priority flexible
 
 # install jupyterhub kernel
-cd /nfs/dust/cms/user/lbenato/anaconda3/envs/run3 #you should be here already, better to be sure
-conda activate run3
+cd /nfs/dust/cms/user/lbenato/anaconda3p10/envs/mds_run3 #you should be here already, better to be sure
+conda activate mds_run3
 pip install ipykernel --user
-python -m ipykernel install --user --name="run3"
+python -m ipykernel install --user --name="mds_run3"
 ```
 
 ### Cloning this repository
