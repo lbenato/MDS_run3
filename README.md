@@ -9,10 +9,10 @@ cd /nfs/dust/cms/user/lbenato/
 # get the anaconda installer
 # Note: To have the latest version, you can look up the list at
 # https://repo.continuum.io/archive/
-wget https://repo.continuum.io/archive/Anaconda3-2022.10-Linux-x86_64.sh
+wget https://repo.continuum.io/archive/Anaconda3-2023.09-0-Linux-x86_64.sh
 
 # install anaconda
-bash Anaconda3-2022.10-Linux-x86_64.sh
+bash Anaconda3-2023.09-0-Linux-x86_64.sh
 
 # press ENTER to review the license agreement and type "yes" to accept
 
