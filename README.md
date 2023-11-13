@@ -71,8 +71,8 @@ conda install scikit-learn
 # install ROOT
 conda config --remove channels conda-forge
 conda config --add channels conda-forge
-#conda config --set solver libmamba #does not work in conda 3.10
-#conda config --experimental-solver=libmamba #try?
+conda config --set solver libmamba
+##conda config --experimental-solver=libmamba
 conda install -c conda-forge root
 
 # install awkward
