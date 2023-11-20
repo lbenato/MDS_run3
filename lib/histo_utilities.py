@@ -1,6 +1,6 @@
 import numpy as np
 import ROOT as rt
-#import root_numpy as rtnp
+import root_numpy as rtnp
 import matplotlib.pyplot as plt
 from array import array
 import math
